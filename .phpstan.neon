@@ -1,0 +1,5 @@
+parameters:
+    level: 8
+    ignoreErrors:
+        - '#Comparison operation "<=" between [0-9]{5} and int<[0-9]{5}, [0-9]{5}> is always true#'
+        - '#Comparison operation "<" between int<[0-9]{5}, [0-9]{5}> and [0-9]{5} is always true#'
