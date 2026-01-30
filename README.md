@@ -22,7 +22,7 @@ composer require --dev kubawerlos/php-cs-fixer-custom-fixers
   ]
 ```
 
-### 3. Add this package to your project's `composer.json`by command line:
+### 3. Add this package to your project's `composer.json` by command line:
 
 ```sh
 composer require --dev thege/thege-phpcsfixer-config
