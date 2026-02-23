@@ -21,8 +21,6 @@ use PhpCsFixerCustomFixers\Fixer\NoUselessParenthesisFixer;
 use PhpCsFixerCustomFixers\Fixer\PromotedConstructorPropertyFixer;
 use PhpCsFixerCustomFixers\Fixer\StringableInterfaceFixer;
 
-//use TheGe\PhpCsFixer\Fixer\TwoBlankLinesBeforeClassKeywordFixer;
-
 //fwrite(STDOUT, var_export(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect(), true));
 
 return (new Config())
@@ -31,9 +29,8 @@ return (new Config())
     ->setRiskyAllowed(true)
     ->setUsingCache(false) // or
     //->setCacheFile(__DIR__.'/.php-cs-fixer.cache')
-    // composer global require kubawerlos/php-cs-fixer-custom-fixers (https://github.com/kubawerlos/php-cs-fixer-custom-fixers)
-    ->registerCustomFixers(new PhpCsFixerCustomFixers\Fixers()) // composer require --dev kubawerlos/php-cs-fixer-custom-fixers
-    //->registerCustomFixers(new TheGe\PhpCsFixer\Fixers())
+    ->registerCustomFixers(new PhpCsFixerCustomFixers\Fixers())
+    //->registerCustomFixers(new TheGe\PhpCsFixer\Fixers()) // composer require --dev thege/thege-phpcsfixer-fixers
     // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/index.rst
     ->setFinder((new Finder())
         ->in(__DIR__)
