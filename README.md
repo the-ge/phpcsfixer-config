@@ -4,7 +4,7 @@ This is my PHP CS Fixer configuration.
 
 ## Usage
 
-### 1. Add [PHP CS Fixer](https://github.com/kubawerlos/php-cs-fixer-custom-fixers) and [Kuba Werłos' custom fixers](https://github.com/kubawerlos/php-cs-fixer-custom-fixers) to your project:
+### 1. Add [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) and [Kuba Werłos' custom fixers](https://github.com/kubawerlos/php-cs-fixer-custom-fixers) to your project:
 
 ```sh
 composer require --dev friendsofphp/php-cs-fixer
