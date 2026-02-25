@@ -34,8 +34,8 @@
         "compat":     "vendor/bin/phpcs -p src --standard=PHPCompatibility",
         "stan":       "vendor/bin/phpstan analyse --configuration=.phpstan.neon src",
         "stan:fresh": "vendor/bin/phpstan clear-result-cache && vendor/bin/phpstan analyse --configuration=.phpstan.neon src",
-        "fix:try":    "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.thege.php --show-progress=dots --dry-run --diff",
-        "fix":        "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.thege.php --show-progress=dots",
+        "fix:try":    "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.dist.php --show-progress=dots --dry-run --diff",
+        "fix":        "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.dist.php --show-progress=dots",
         "deploy":     "composer install --no-dev --classmap-authoritative"
     },
     "minimum-stability": "dev",
