@@ -20,6 +20,7 @@ use PhpCsFixerCustomFixers\Fixer\NoUselessDirnameCallFixer;
 use PhpCsFixerCustomFixers\Fixer\NoUselessParenthesisFixer;
 use PhpCsFixerCustomFixers\Fixer\PromotedConstructorPropertyFixer;
 use PhpCsFixerCustomFixers\Fixer\StringableInterfaceFixer;
+use TheGe\PhpCsFixer\Fixer\ClassNotation\ClassyDeclarationAfterTwoBlankLinesFixer;
 
 //fwrite(STDOUT, var_export(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect(), true));
 
@@ -29,9 +30,8 @@ return (new Config())
     ->setRiskyAllowed(true)
     ->setUsingCache(false) // or
     //->setCacheFile(__DIR__.'/.php-cs-fixer.cache')
-    ->registerCustomFixers(new PhpCsFixerCustomFixers\Fixers())
-    //->registerCustomFixers(new TheGe\PhpCsFixer\Fixers()) // composer require --dev thege/thege-phpcsfixer-fixers
-    // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/index.rst
+    ->registerCustomFixers(new PhpCsFixerCustomFixers\Fixers())              // composer require --dev kubawerlos/php-cs-fixer-custom-fixers
+    ->registerCustomFixers([new ClassyDeclarationAfterTwoBlankLinesFixer()]) // composer require --dev thege/thege-phpcsfixer-fixers
     ->setFinder((new Finder())
         ->in(__DIR__)
         ->name('*.php')
@@ -42,7 +42,7 @@ return (new Config())
         ->exclude(['.git', 'vendor'])
         ->notPath(['rector.php'])
     )
-    ->setRules([
+    ->setRules([ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/index.rst
         '@PSR12'                 => true,
         '@PHP7x4Migration'       => 70400 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80000,
         '@PHP7x4Migration:risky' => 70400 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80000,
@@ -366,11 +366,11 @@ return (new Config())
             'space'                => 'none',
             'space_multiple_catch' => null,
         ],
-        DeclareAfterOpeningTagFixer::name()      => true,
-        NoUselessDirnameCallFixer::name()        => true,
-        NoUselessParenthesisFixer::name()        => true,
-        PromotedConstructorPropertyFixer::name() => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
-        StringableInterfaceFixer::name()         => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
-        //TwoBlankLinesBeforeClassKeywordFixer::name() => true,
+        DeclareAfterOpeningTagFixer::name()              => true,
+        NoUselessDirnameCallFixer::name()                => true,
+        NoUselessParenthesisFixer::name()                => true,
+        PromotedConstructorPropertyFixer::name()         => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
+        StringableInterfaceFixer::name()                 => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
+        'TheGe/classy_declaration_after_two_blank_lines' => true,
     ])
 ;
