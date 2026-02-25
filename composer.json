@@ -32,8 +32,8 @@
         "boot":       "composer install --optimize-autoloader",
         "lint":       "vendor/bin/parallel-lint src",
         "compat":     "vendor/bin/phpcs -p src --standard=PHPCompatibility",
-        "stan":       "vendor/bin/phpstan analyse --configuration=.phpstan.neon src",
-        "stan:fresh": "vendor/bin/phpstan clear-result-cache && vendor/bin/phpstan analyse --configuration=.phpstan.neon src",
+        "stan":       "vendor/bin/phpstan analyse --configuration=.dev/phpstan.neon",
+        "stan:fresh": "vendor/bin/phpstan clear-result-cache && vendor/bin/phpstan analyse --configuration=.dev/phpstan.neon",
         "fix:try":    "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.dist.php --show-progress=dots --dry-run --diff",
         "fix":        "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.dist.php --show-progress=dots",
         "deploy":     "composer install --no-dev --classmap-authoritative"
