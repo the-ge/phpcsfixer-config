@@ -2,17 +2,16 @@
     "name": "thege/thege-phpcsfixer-config",
     "description": "The Ge's PHP CS Fixer configuration",
     "type": "library",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "Gabriel Tenita",
             "email": "the.ge@tenita.eu"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": "^7.4|^8.0|^8.1|^8.2|^8.3|^8.4|^8.5",
-        "friendsofphp/php-cs-fixer": "^3.93",
+        "friendsofphp/php-cs-fixer": "^3",
         "kubawerlos/php-cs-fixer-custom-fixers": "dev-main"
     },
     "require-dev": {
@@ -24,18 +23,21 @@
         "phpstan/phpstan": "^2.0"
     },
     "config": {
+        "sort-packages": true,
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
     "scripts": {
-        "boot":     "composer install --optimize-autoloader",
-        "lint":     "vendor/bin/parallel-lint src",
-        "ver":      "vendor/bin/phpcs -p src --standard=PHPCompatibility",
-        "stan":     "vendor/bin/phpstan analyse --configuration=.phpstan.neon src",
-        "stan-new": "vendor/bin/phpstan clear-result-cache && vendor/bin/phpstan analyse --configuration=.phpstan.neon src",
-        "try-fix":  "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.thege.php --show-progress=dots --dry-run --diff",
-        "fix":      "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.thege.php --show-progress=dots",
-        "deploy":   "composer install --no-dev --classmap-authoritative"
-    }
+        "boot":       "composer install --optimize-autoloader",
+        "lint":       "vendor/bin/parallel-lint src",
+        "compat":     "vendor/bin/phpcs -p src --standard=PHPCompatibility",
+        "stan":       "vendor/bin/phpstan analyse --configuration=.phpstan.neon src",
+        "stan:fresh": "vendor/bin/phpstan clear-result-cache && vendor/bin/phpstan analyse --configuration=.phpstan.neon src",
+        "fix:try":    "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.thege.php --show-progress=dots --dry-run --diff",
+        "fix":        "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.thege.php --show-progress=dots",
+        "deploy":     "composer install --no-dev --classmap-authoritative"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
