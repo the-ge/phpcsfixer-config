@@ -1,6 +1,6 @@
-# [The Ge's PHP CS Fixer configuration](https://github.com/the-ge/php-cs-config)
+# [The Ge's PHP CS Fixer configuration](https://github.com/the-ge/phpcsfixer-config)
 
-This is my PHP CS Fixer configuration.
+This is The Ge's PHP CS Fixer configuration.
 
 ## Usage
 
