@@ -125,8 +125,10 @@ return (new Config())
         //'single_trait_insert_per_statement' => false, // @PSR12
         'stringable_for_to_string' => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
         // ------------------------------------------------------------------------------------------ Comment
-        'no_empty_comment'          => true, // @Symfony
-        'single_line_comment_style' => ['comment_types' => ['hash']], // @Symfony
+        'no_empty_comment'                  => true, // @Symfony
+        'multiline_comment_opening_closing' => true, // @PhpCsFixer
+        'single_line_comment_spacing'       => true, // @Symfony
+        'single_line_comment_style'         => ['comment_types' => ['hash']], // @Symfony
 
         // ------------------------------------------------------------------------------------------ Constant Notation
         'native_constant_invocation' => [ // @Symfony:risky
