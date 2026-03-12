@@ -243,7 +243,7 @@ return (new Config())
         'linebreak_after_opening_tag' => false,
         // ------------------------------------------------------------------------------------------ PHPDoc
         'align_multiline_comment' => true, // @Symfony
-        //'no_blank_lines_after_phpdoc' => true, // @Symfony
+        'no_blank_lines_after_phpdoc' => true, // @Symfony
         'no_empty_phpdoc'                     => true, // @Symfony
         'no_superfluous_phpdoc_tags'          => ['allow_hidden_params' => true, 'remove_inheritdoc' => true], // @Symfony
         'phpdoc_add_missing_param_annotation' => ['only_untyped' => true], // @PhpCsFixer
