@@ -66,7 +66,6 @@ return (new Config())
         'no_mixed_echo_print'              => ['use' => 'echo'], // @Symfony:risky
         'set_type_to_cast'                 => true, // @Symfony:risky
         // ------------------------------------------------------------------------------------------ Array Notation
-        'return_to_yield_from'            => true,
         'trim_array_spaces'               => true, // @Symfony
         'whitespace_after_comma_in_array' => ['ensure_single_space' => true], // @PhpCsFixer
 
