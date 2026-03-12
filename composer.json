@@ -1,5 +1,5 @@
 {
-    "name": "thege/thege-phpcsfixer-config",
+    "name": "thege/phpcsfixer-config",
     "description": "The Ge's PHP CS Fixer configuration",
     "type": "library",
     "license": "MIT",
