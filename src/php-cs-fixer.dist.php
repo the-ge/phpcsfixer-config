@@ -372,6 +372,6 @@ return (new Config())
         NoUselessParenthesisFixer::name()             => true,
         PromotedConstructorPropertyFixer::name()      => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
         StringableInterfaceFixer::name()              => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
-        'TheGe/TheGe/blank_lines_before_classy_block' => true,
+        'TheGe/blank_lines_before_classy_block' => true,
     ])
 ;
