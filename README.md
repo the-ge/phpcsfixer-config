@@ -30,7 +30,7 @@ composer require --dev thege/thege-phpcsfixer-config
 composer install
 ```
 
-### 2. Run it (from your project's root) either:
+### 2. Run PHP CS Fixer (from your project's root) with this configuration either:
 
 #### 2.1. Directly
 
