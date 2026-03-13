@@ -4,18 +4,26 @@ This is The Ge's PHP CS Fixer configuration.
 
 ## Usage
 
-### 1. Add this package to your project's `composer.json` by command line:
+### 1. Add this package to your project by either the following methods:
+
+> [!NOTE]
+> [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) and [Kuba Werłos' custom fixers](https://github.com/kubawerlos/php-cs-fixer-custom-fixers) will be added as dependencies as well.
+
+#### 1.1. Command line
 
 ```sh
 composer require --dev thege/thege-phpcsfixer-config
 ```
 
-or add the package info to the `require-dev` section:
+#### 1.2. Copy the package info to the `composer.json`'s `require-dev` section
 
 ```json
+// [...]
   "require-dev": {
+    // [...]
     "thege/thege-phpcsfixer-config": "^1.0"
   }
+// [...]
 ```
 
 and install it:
@@ -24,10 +32,9 @@ and install it:
 composer install
 ```
 
-> [!NOTE]
-> [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) and [Kuba Werłos' custom fixers](https://github.com/kubawerlos/php-cs-fixer-custom-fixers) will be added as dependencies as well.
+### 2. Run it (from your project's root) either:
 
-### 2. Run it (from your project's root), either directly:
+#### 2.1. Directly
 
 ```sh
 # dry run
@@ -36,13 +43,18 @@ vendor/bin/php-cs-fixer fix src --config=vendor/the-ge/phpcsfixer-config/src/php
 vendor/bin/php-cs-fixer fix src --config=vendor/the-ge/phpcsfixer-config/src/php-cs-fixer.dist.php --show-progress=dots
 ```
 
-or after you add it to your project's `composer.json` `scripts` section:
+#### or
+
+#### 2.2. As a script by adding it to your project's `composer.json` `scripts` section
 
 ```json
+// [...]
   "scripts": {
+    // [...]
     "fix:dry":  "vendor/bin/php-cs-fixer fix src --config=vendor/the-ge/phpcsfixer-config/src/php-cs-fixer.dist.php --show-progress=dots --dry-run --diff",
     "fix":      "vendor/bin/php-cs-fixer fix src --config=vendor/the-ge/phpcsfixer-config/src/php-cs-fixer.dist.php --show-progress=dots",
   }
+// [...]
 ```
 
 ```sh
