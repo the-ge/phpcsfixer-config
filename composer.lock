@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f7f8902349539f3ba919d36a34eb6e42",
+    "content-hash": "176a4f6e7ddebe0d398da2862ba7d633",
     "packages": [
         {
             "name": "clue/ndjson-react",
@@ -2731,16 +2731,16 @@
         },
         {
             "name": "the-ge/phpcsfixer-fixers",
-            "version": "dev-main",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/the-ge/phpcsfixer-fixers.git",
-                "reference": "92e60092737508e15e8f114d0227ec3bc8ad8eef"
+                "reference": "08c519cce21adac00ebbb7b92a655bafb74737ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/the-ge/phpcsfixer-fixers/zipball/92e60092737508e15e8f114d0227ec3bc8ad8eef",
-                "reference": "92e60092737508e15e8f114d0227ec3bc8ad8eef",
+                "url": "https://api.github.com/repos/the-ge/phpcsfixer-fixers/zipball/08c519cce21adac00ebbb7b92a655bafb74737ff",
+                "reference": "08c519cce21adac00ebbb7b92a655bafb74737ff",
                 "shasum": ""
             },
             "require": {
@@ -2757,7 +2757,6 @@
                 "slevomat/coding-standard": "^8.26",
                 "squizlabs/php_codesniffer": "^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -2816,10 +2815,10 @@
             ],
             "description": "Custom PHP CS Fixer rules by The Ge",
             "support": {
-                "source": "https://github.com/the-ge/phpcsfixer-fixers/tree/1.0.0",
+                "source": "https://github.com/the-ge/phpcsfixer-fixers/tree/1.0.1",
                 "issues": "https://github.com/the-ge/phpcsfixer-fixers/issues"
             },
-            "time": "2026-03-12T15:43:44+00:00"
+            "time": "2026-03-12T16:47:05+00:00"
         }
     ],
     "packages-dev": [
@@ -3513,8 +3512,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "kubawerlos/php-cs-fixer-custom-fixers": 20,
-        "phpcompatibility/php-compatibility": 15,
-        "the-ge/phpcsfixer-fixers": 20
+        "phpcompatibility/php-compatibility": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
