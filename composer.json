@@ -10,7 +10,10 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0|^8.1|^8.2|^8.3|^8.4|^8.5"
+        "php": "^7.4|^8.0|^8.1|^8.2|^8.3|^8.4|^8.5",
+        "friendsofphp/php-cs-fixer": "^3",
+        "kubawerlos/php-cs-fixer-custom-fixers": "dev-main",
+        "the-ge/phpcsfixer-fixers": "^1.0"
     },
     "require-dev": {
         "php-parallel-lint/php-console-highlighter": "^1.0",
@@ -18,10 +21,7 @@
         "phpcompatibility/php-compatibility": "^10.0.0@dev",
         "phpstan/phpstan": "^2.0",
         "slevomat/coding-standard": "^8.26",
-        "squizlabs/php_codesniffer": "^4.0",
-        "friendsofphp/php-cs-fixer": "^3",
-        "kubawerlos/php-cs-fixer-custom-fixers": "dev-main",
-        "the-ge/phpcsfixer-fixers": "^1.0"
+        "squizlabs/php_codesniffer": "^4.0"
     },
     "config": {
         "sort-packages": true,
