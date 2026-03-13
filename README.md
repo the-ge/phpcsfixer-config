@@ -4,63 +4,50 @@ This is The Ge's PHP CS Fixer configuration.
 
 ## Usage
 
-### 1. Add [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) and [Kuba Werłos' custom fixers](https://github.com/kubawerlos/php-cs-fixer-custom-fixers) to your project:
-
-```sh
-composer require --dev friendsofphp/php-cs-fixer
-composer require --dev kubawerlos/php-cs-fixer-custom-fixers
-```
-
-### 2. Add this configuration repository to your project's `composer.json` `repositories` section:
-
-```json
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/the-ge/php-cs-config"
-    }
-  ]
-```
-
-### 3. Add this package to your project's `composer.json` by command line:
+### 1. Add this package to your project's `composer.json` by command line:
 
 ```sh
 composer require --dev thege/thege-phpcsfixer-config
 ```
 
-or add the package info to the `require-dev` section and install it:
+or add the package info to the `require-dev` section:
 
 ```json
   "require-dev": {
-    "thege/thege-phpcsfixer-config": "dev-main"
+    "thege/thege-phpcsfixer-config": "^1.0"
   }
 ```
+
+and install it:
 
 ```sh
 composer install
 ```
 
-### 4. Finally, run it (from your project's root), either directly:
+> [!NOTE]
+> [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) and [Kuba Werłos' custom fixers](https://github.com/kubawerlos/php-cs-fixer-custom-fixers) will be added as dependencies as well.
+
+### 2. Run it (from your project's root), either directly:
 
 ```sh
 # dry run
-vendor/bin/php-cs-fixer fix src --config=vendor/thege/thege-phpcsfixer-config/src/php-cs-fixer.thege.php --show-progress=dots --dry-run --diff
+vendor/bin/php-cs-fixer fix src --config=vendor/the-ge/phpcsfixer-config/src/php-cs-fixer.dist.php --show-progress=dots --dry-run --diff
 # real run
-vendor/bin/php-cs-fixer fix src --config=vendor/thege/thege-phpcsfixer-config/src/php-cs-fixer.thege.php --show-progress=dots
+vendor/bin/php-cs-fixer fix src --config=vendor/the-ge/phpcsfixer-config/src/php-cs-fixer.dist.php --show-progress=dots
 ```
 
 or after you add it to your project's `composer.json` `scripts` section:
 
 ```json
   "scripts": {
-    "try-fix":  "vendor/bin/php-cs-fixer fix src --config=vendor/thege/thege-phpcsfixer-config/src/php-cs-fixer.thege.php --show-progress=dots --dry-run --diff",
-    "fix":      "vendor/bin/php-cs-fixer fix src --config=vendor/thege/thege-phpcsfixer-config/src/php-cs-fixer.thege.php --show-progress=dots",
+    "fix:dry":  "vendor/bin/php-cs-fixer fix src --config=vendor/the-ge/phpcsfixer-config/src/php-cs-fixer.dist.php --show-progress=dots --dry-run --diff",
+    "fix":      "vendor/bin/php-cs-fixer fix src --config=vendor/the-ge/phpcsfixer-config/src/php-cs-fixer.dist.php --show-progress=dots",
   }
 ```
 
 ```sh
 # dry run
-composer try-fix
+composer fix:dry
 # real run
 composer fix
 ```
