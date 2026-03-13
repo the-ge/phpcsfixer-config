@@ -1,5 +1,5 @@
 {
-    "name": "the-ge/phpcsfixer-config",
+    "name": "thege/thege-phpcsfixer-config",
     "description": "The Ge's PHP CS Fixer configuration",
     "type": "library",
     "license": "MIT",
@@ -9,25 +9,19 @@
             "email": "the.ge@tenita.eu"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/the-ge/phpcsfixer-fixers"
-        }
-    ],
     "require": {
-        "php": "^7.4|^8.0|^8.1|^8.2|^8.3|^8.4|^8.5",
-        "friendsofphp/php-cs-fixer": "^3",
-        "kubawerlos/php-cs-fixer-custom-fixers": "dev-main",
-        "the-ge/phpcsfixer-fixers": "^1"
+        "php": "^7.4|^8.0|^8.1|^8.2|^8.3|^8.4|^8.5"
     },
     "require-dev": {
         "php-parallel-lint/php-console-highlighter": "^1.0",
         "php-parallel-lint/php-parallel-lint": "^1.4",
-        "squizlabs/php_codesniffer": "^4.0",
         "phpcompatibility/php-compatibility": "^10.0@alpha",
+        "phpstan/phpstan": "^2.0",
         "slevomat/coding-standard": "^8.26",
-        "phpstan/phpstan": "^2.0"
+        "squizlabs/php_codesniffer": "^4.0",
+        "friendsofphp/php-cs-fixer": "^3",
+        "kubawerlos/php-cs-fixer-custom-fixers": "dev-main",
+        "the-ge/phpcsfixer-fixers": "^1.0"
     },
     "config": {
         "sort-packages": true,
@@ -37,12 +31,12 @@
     },
     "scripts": {
         "boot":       "composer install --optimize-autoloader",
+        "compat":      "vendor/bin/phpcs -p src --standard=PHPCompatibility --runtime-set testVersion 8.4",
         "lint":       "vendor/bin/parallel-lint src",
-        "compat":     "vendor/bin/phpcs -p src --standard=PHPCompatibility",
+        "stan:clear": "vendor/bin/phpstan clear-result-cache",
         "stan":       "vendor/bin/phpstan analyse --configuration=.dev/phpstan.neon",
-        "stan:fresh": "vendor/bin/phpstan clear-result-cache && vendor/bin/phpstan analyse --configuration=.dev/phpstan.neon",
-        "fix:try":    "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.dist.php --show-progress=dots --dry-run --diff",
-        "fix":        "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.dist.php --show-progress=dots",
+        "fix:dry":    "vendor/bin/php-cs-fixer fix src --config=vendor/the-ge/phpcsfixer-config/src/php-cs-fixer.dist.php --show-progress=dots --dry-run --diff",
+        "fix":        "vendor/bin/php-cs-fixer fix src --config=vendor/the-ge/phpcsfixer-config/src/php-cs-fixer.dist.php --show-progress=dots",
         "deploy":     "composer install --no-dev --classmap-authoritative"
     },
     "minimum-stability": "dev",
