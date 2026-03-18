@@ -210,6 +210,7 @@ return (new Config())
             'operators' => [
                 '='  => 'align_single_space_minimal',
                 '=>' => 'align_single_space_minimal',
+                '|'  => 'no_space',
             ],
         ],
         'concat_space'               => ['spacing' => 'none'], // @Symfony
