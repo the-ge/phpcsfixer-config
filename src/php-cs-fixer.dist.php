@@ -25,8 +25,8 @@ use TheGe\PhpCsFixer\Fixer\ClassNotation\BlankLinesBeforeClassyBlockFixer;
 //fwrite(STDOUT, var_export(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect(), true));
 
 $migrationRuleset = '@PHP'.\PHP_MAJOR_VERSION.'x'.\PHP_MINOR_VERSION.'Migration';
-$phpMinVersion = \PHP_MAJOR_VERSION * 10000 + \PHP_MINOR_VERSION * 100;
-$phpMaxVersion = $phpMinVersion === 70400 ? 80000 : $phpMinVersion + 100;
+$phpMinVersion    = \PHP_MAJOR_VERSION * 10000 + \PHP_MINOR_VERSION * 100;
+$phpMaxVersion    = $phpMinVersion === 70400 ? 80000 : $phpMinVersion + 100;
 
 return (new Config())
     ->setParallelConfig(ParallelConfigFactory::detect())
@@ -36,7 +36,8 @@ return (new Config())
     //->setCacheFile(__DIR__.'/.php-cs-fixer.cache')
     ->registerCustomFixers(new PhpCsFixerCustomFixers\Fixers())              // composer require --dev kubawerlos/php-cs-fixer-custom-fixers
     ->registerCustomFixers([new BlankLinesBeforeClassyBlockFixer()]) // composer require --dev thege/thege-phpcsfixer-fixers
-    ->setFinder((new Finder())
+    ->setFinder(
+        (new Finder())
         ->in(__DIR__)
         ->name('*.php')
         ->name('*.inc')
@@ -234,8 +235,8 @@ return (new Config())
         ],
         'linebreak_after_opening_tag' => false,
         // ------------------------------------------------------------------------------------------ PHPDoc
-        'align_multiline_comment' => true, // @Symfony
-        'no_blank_lines_after_phpdoc' => true, // @Symfony
+        'align_multiline_comment'             => true, // @Symfony
+        'no_blank_lines_after_phpdoc'         => true, // @Symfony
         'no_empty_phpdoc'                     => true, // @Symfony
         'no_superfluous_phpdoc_tags'          => ['allow_hidden_params' => true, 'remove_inheritdoc' => true], // @Symfony
         'phpdoc_add_missing_param_annotation' => ['only_untyped' => true], // @PhpCsFixer
@@ -359,11 +360,11 @@ return (new Config())
             'space'                => 'none',
             'space_multiple_catch' => null,
         ],
-        DeclareAfterOpeningTagFixer::name()           => true,
-        NoUselessDirnameCallFixer::name()             => true,
-        NoUselessParenthesisFixer::name()             => true,
-        PromotedConstructorPropertyFixer::name()      => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
-        StringableInterfaceFixer::name()              => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
-        'TheGe/blank_lines_before_classy_block' => true,
+        DeclareAfterOpeningTagFixer::name()      => true,
+        NoUselessDirnameCallFixer::name()        => true,
+        NoUselessParenthesisFixer::name()        => true,
+        PromotedConstructorPropertyFixer::name() => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
+        StringableInterfaceFixer::name()         => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
+        'TheGe/blank_lines_before_classy_block'  => true,
     ])
 ;
