@@ -30,6 +30,7 @@ return (new Config())
     ->setUsingCache(false) // or
     //->setCacheFile(__DIR__.'/.php-cs-fixer.cache')
     ->registerCustomFixers(new \PhpCsFixerCustomFixers\Fixers())  // composer require --dev kubawerlos/php-cs-fixer-custom-fixers
+    ->registerCustomFixers(new \ErickSkrauch\PhpCsFixer\Fixers()) // composer require --dev erickskrauch/php-cs-fixer-custom-fixers
     ->registerCustomFixers([new BlankLinesBeforeClassyBlockFixer()]) // composer require --dev thege/thege-phpcsfixer-fixers
     ->setFinder(
         (new Finder())
@@ -362,6 +363,7 @@ return (new Config())
         'PhpCsFixerCustomFixers/no_useless_parenthesis'        => true,
         'PhpCsFixerCustomFixers/promoted_constructor_property' => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
         'PhpCsFixerCustomFixers/stringable_interface'          => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
+        'ErickSkrauch/align_multiline_parameters'              => true,
         'TheGe/blank_lines_before_classy_block'                => true,
     ])
 ;
