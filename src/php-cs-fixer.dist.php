@@ -26,7 +26,7 @@ use TheGe\PhpCsFixer\Fixer\ClassNotation\BlankLinesBeforeClassyBlockFixer;
 
 $migrationRuleset = '@PHP'.\PHP_MAJOR_VERSION.'x'.\PHP_MINOR_VERSION.'Migration';
 $phpMinVersion = \PHP_MAJOR_VERSION * 10000 + \PHP_MINOR_VERSION * 100;
-$phpMaxVersion = (\PHP_MAJOR_VERSION + 1) * 10000;
+$phpMaxVersion = $phpMinVersion === 70400 ? 80000 : $phpMinVersion + 100;
 
 return (new Config())
     ->setParallelConfig(ParallelConfigFactory::detect())
