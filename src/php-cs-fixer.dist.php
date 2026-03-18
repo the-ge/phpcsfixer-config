@@ -24,6 +24,10 @@ use TheGe\PhpCsFixer\Fixer\ClassNotation\BlankLinesBeforeClassyBlockFixer;
 
 //fwrite(STDOUT, var_export(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect(), true));
 
+$migrationRuleset = '@PHP'.\PHP_MAJOR_VERSION.'x'.\PHP_MINOR_VERSION.'Migration';
+$phpMinVersion = \PHP_MAJOR_VERSION * 10000 + \PHP_MINOR_VERSION * 100;
+$phpMaxVersion = (\PHP_MAJOR_VERSION + 1) * 10000;
+
 return (new Config())
     ->setParallelConfig(ParallelConfigFactory::detect())
     //->setUnsupportedPhpVersionAllowed(true)
@@ -43,21 +47,9 @@ return (new Config())
         ->notPath(['rector.php'])
     )
     ->setRules([ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/index.rst
-        '@PSR12'                 => true,
-        '@PHP7x4Migration'       => 70400 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80000,
-        '@PHP7x4Migration:risky' => 70400 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80000,
-        '@PHP8x0Migration'       => 80000 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80100,
-        '@PHP8x0Migration:risky' => 80000 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80100,
-        '@PHP8x1Migration'       => 80100 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80200,
-        '@PHP8x1Migration:risky' => 80100 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80200,
-        '@PHP8x2Migration'       => 80200 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80300,
-        '@PHP8x2Migration:risky' => 80200 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80300,
-        '@PHP8x3Migration'       => 80300 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80400,
-        '@PHP8x3Migration:risky' => 80300 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80400,
-        '@PHP8x4Migration'       => 80400 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80500,
-        '@PHP8x4Migration:risky' => 80400 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80500,
-        '@PHP8x5Migration'       => 80500 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80600,
-        '@PHP8x5Migration:risky' => 80500 <= \PHP_VERSION_ID && \PHP_VERSION_ID < 80600,
+        '@PSR12'                    => true,
+        '@PHP8x5Migration'          => $phpMinVersion <= \PHP_VERSION_ID && \PHP_VERSION_ID < $phpMaxVersion,
+        "{$migrationRuleset}:risky" => $phpMinVersion <= \PHP_VERSION_ID && \PHP_VERSION_ID < $phpMaxVersion,
         // ------------------------------------------------------------------------------------------ Alias
         'array_push'                       => true, // @Symfony:risky
         'ereg_to_preg'                     => true, // @Symfony:risky
