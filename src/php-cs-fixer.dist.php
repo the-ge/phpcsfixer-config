@@ -48,7 +48,7 @@ return (new Config())
     )
     ->setRules([ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/index.rst
         '@PSR12'                    => true,
-        '@PHP8x5Migration'          => $phpMinVersion <= \PHP_VERSION_ID && \PHP_VERSION_ID < $phpMaxVersion,
+        $migrationRuleset           => $phpMinVersion <= \PHP_VERSION_ID && \PHP_VERSION_ID < $phpMaxVersion,
         "{$migrationRuleset}:risky" => $phpMinVersion <= \PHP_VERSION_ID && \PHP_VERSION_ID < $phpMaxVersion,
         // ------------------------------------------------------------------------------------------ Alias
         'array_push'                       => true, // @Symfony:risky
