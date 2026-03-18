@@ -15,12 +15,7 @@
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 use PhpCsFixer\Runner\Parallel\ParallelConfigFactory;
-use PhpCsFixerCustomFixers\Fixer\DeclareAfterOpeningTagFixer;
-use PhpCsFixerCustomFixers\Fixer\NoUselessDirnameCallFixer;
-use PhpCsFixerCustomFixers\Fixer\NoUselessParenthesisFixer;
-use PhpCsFixerCustomFixers\Fixer\PromotedConstructorPropertyFixer;
-use PhpCsFixerCustomFixers\Fixer\StringableInterfaceFixer;
-use TheGe\PhpCsFixer\Fixer\ClassNotation\BlankLinesBeforeClassyBlockFixer;
+
 
 //fwrite(STDOUT, var_export(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect(), true));
 
@@ -34,7 +29,7 @@ return (new Config())
     ->setRiskyAllowed(true)
     ->setUsingCache(false) // or
     //->setCacheFile(__DIR__.'/.php-cs-fixer.cache')
-    ->registerCustomFixers(new PhpCsFixerCustomFixers\Fixers())              // composer require --dev kubawerlos/php-cs-fixer-custom-fixers
+    ->registerCustomFixers(new \PhpCsFixerCustomFixers\Fixers())  // composer require --dev kubawerlos/php-cs-fixer-custom-fixers
     ->registerCustomFixers([new BlankLinesBeforeClassyBlockFixer()]) // composer require --dev thege/thege-phpcsfixer-fixers
     ->setFinder(
         (new Finder())
@@ -362,11 +357,11 @@ return (new Config())
             'space'                => 'none',
             'space_multiple_catch' => null,
         ],
-        DeclareAfterOpeningTagFixer::name()      => true,
-        NoUselessDirnameCallFixer::name()        => true,
-        NoUselessParenthesisFixer::name()        => true,
-        PromotedConstructorPropertyFixer::name() => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
-        StringableInterfaceFixer::name()         => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
-        'TheGe/blank_lines_before_classy_block'  => true,
+        'PhpCsFixerCustomFixers/declare_after_opening_tag'     => true,
+        'PhpCsFixerCustomFixers/no_useless_dirname_call'       => true,
+        'PhpCsFixerCustomFixers/no_useless_parenthesis'        => true,
+        'PhpCsFixerCustomFixers/promoted_constructor_property' => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
+        'PhpCsFixerCustomFixers/stringable_interface'          => \PHP_VERSION_ID >= 80000, // [PHP 8.0+]
+        'TheGe/blank_lines_before_classy_block'                => true,
     ])
 ;
