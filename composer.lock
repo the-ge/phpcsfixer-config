@@ -2731,23 +2731,24 @@
         },
         {
             "name": "the-ge/phpcsfixer-fixers",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/the-ge/phpcsfixer-fixers.git",
-                "reference": "168bc79785aed666967f350830752eed2936137e"
+                "reference": "7d4e51264e6f4a82ee4b358c2f60b8bf3ade8af8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/the-ge/phpcsfixer-fixers/zipball/168bc79785aed666967f350830752eed2936137e",
-                "reference": "168bc79785aed666967f350830752eed2936137e",
+                "url": "https://api.github.com/repos/the-ge/phpcsfixer-fixers/zipball/7d4e51264e6f4a82ee4b358c2f60b8bf3ade8af8",
+                "reference": "7d4e51264e6f4a82ee4b358c2f60b8bf3ade8af8",
                 "shasum": ""
             },
             "require": {
+                "friendsofphp/php-cs-fixer": "^3.94",
                 "php": "^8.1 || ^8.2 || ^8.3 || ^8.4"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.94",
+                "erickskrauch/php-cs-fixer-custom-fixers": "^1.3",
                 "kubawerlos/php-cs-fixer-custom-fixers": "dev-main",
                 "php-parallel-lint/php-console-highlighter": "^1.0",
                 "php-parallel-lint/php-parallel-lint": "^1.4",
@@ -2776,9 +2777,9 @@
             "description": "Custom PHP CS Fixer rules by The Ge",
             "support": {
                 "issues": "https://github.com/the-ge/phpcsfixer-fixers/issues",
-                "source": "https://github.com/the-ge/phpcsfixer-fixers/tree/1.0.5"
+                "source": "https://github.com/the-ge/phpcsfixer-fixers/tree/1.0.6"
             },
-            "time": "2026-03-13T15:44:21+00:00"
+            "time": "2026-03-18T14:24:25+00:00"
         }
     ],
     "packages-dev": [

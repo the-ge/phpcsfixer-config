@@ -31,7 +31,7 @@ return (new Config())
     //->setCacheFile(__DIR__.'/.php-cs-fixer.cache')
     ->registerCustomFixers(new \PhpCsFixerCustomFixers\Fixers())  // composer require --dev kubawerlos/php-cs-fixer-custom-fixers
     ->registerCustomFixers(new \ErickSkrauch\PhpCsFixer\Fixers()) // composer require --dev erickskrauch/php-cs-fixer-custom-fixers
-    ->registerCustomFixers([new BlankLinesBeforeClassyBlockFixer()]) // composer require --dev thege/thege-phpcsfixer-fixers
+    ->registerCustomFixers(new \TheGe\PhpCsFixer\Fixers())        // composer require --dev thege/thege-phpcsfixer-fixers
     ->setFinder(
         (new Finder())
         ->in(__DIR__)
