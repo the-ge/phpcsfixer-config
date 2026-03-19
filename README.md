@@ -21,7 +21,7 @@ composer require --dev thege/phpcsfixer-config
 // [...]
   "require-dev": {
     // [...]
-    "thege/thege-phpcsfixer-config": "^1.0"
+    "thege/phpcsfixer-config": "^1.0"
   }
 // [...]
 ```
