@@ -12,7 +12,7 @@ This is The Ge's PHP CS Fixer configuration.
 #### 1.1. Command line
 
 ```sh
-composer require --dev thege/thege-phpcsfixer-config
+composer require --dev thege/phpcsfixer-config
 ```
 
 #### 1.2. Copy the package info to the `composer.json`'s `require-dev` section and install it:
