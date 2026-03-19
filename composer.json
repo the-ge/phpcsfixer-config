@@ -37,8 +37,8 @@
         "stan:clear": "vendor/bin/phpstan clear-result-cache",
         "stan":       "vendor/bin/phpstan analyse --configuration=.dev/phpstan.neon",
         "check":      ["@compat", "@lint", "@stan"],
-        "fix:dry":    "vendor/bin/php-cs-fixer fix src --config=.dev/php-cs-fixer.dev.php --show-progress=dots --dry-run --diff",
-        "fix":        "vendor/bin/php-cs-fixer fix src --config=.dev/php-cs-fixer.dev.php --show-progress=dots",
+        "fix:dry":    "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.dist.php --show-progress=dots --dry-run --diff",
+        "fix":        "vendor/bin/php-cs-fixer fix src --config=src/php-cs-fixer.dist.php --show-progress=dots",
         "deploy":     "composer install --no-dev --classmap-authoritative"
     },
     "minimum-stability": "dev",
