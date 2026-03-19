@@ -32,7 +32,7 @@
     },
     "scripts": {
         "boot":       "composer install --optimize-autoloader",
-        "compat":     "vendor/bin/phpcs -p src --standard=PHPCompatibility --runtime-set testVersion 8.4",
+        "compat":     "vendor/bin/phpcs -p src --standard=PHPCompatibility --runtime-set testVersion $( php -r 'echo PHP_MAJOR_VERSION.\".\".PHP_MINOR_VERSION;' )",
         "lint":       "vendor/bin/parallel-lint src",
         "stan:clear": "vendor/bin/phpstan clear-result-cache",
         "stan":       "vendor/bin/phpstan analyse --configuration=.dev/phpstan.neon",
