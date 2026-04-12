@@ -255,7 +255,16 @@ return (new Config())
                 'tutorial',
             ],
         ],
-        'phpdoc_line_span' => ['const' => 'single', 'method' => null, 'property' => 'single'],
+        'phpdoc_line_span' => [
+            'case'         => 'single',
+            'class'        => 'single',
+            'const'        => 'single',
+            'function'     => 'single',
+            'method'       => 'single',
+            'other'        => 'single',
+            'property'     => 'single',
+            'trait_import' => 'single',
+        ],
         //'phpdoc_list_type' => true, // [RISKY]
         'phpdoc_no_access'    => true, // @Symfony
         'phpdoc_no_alias_tag' => [ // @Symfony
