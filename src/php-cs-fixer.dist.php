@@ -161,7 +161,6 @@ return (new Config())
             'trailing_comma_single_line' => false,
         ],
         'lambda_not_used_import'        => true, // @Symfony
-        'multiline_promoted_properties' => true, // [PHP8.0+]
         'native_function_invocation'    => [ // @Symfony:risky
             'exclude' => [],
             'include' => ['@compiler_optimized'],
