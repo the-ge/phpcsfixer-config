@@ -46,23 +46,25 @@ return (new Config())
         '@PSR12'                    => true,
         $migrationRuleset           => $phpMinVersion <= \PHP_VERSION_ID && \PHP_VERSION_ID < $phpMaxVersion,
         "{$migrationRuleset}:risky" => $phpMinVersion <= \PHP_VERSION_ID && \PHP_VERSION_ID < $phpMaxVersion,
-        // ------------------------------------------------------------------------------------------ Alias
-        'array_push'                       => true, // @Symfony:risky
-        'ereg_to_preg'                     => true, // @Symfony:risky
-        'no_alias_language_construct_call' => true, // @Symfony
-        'no_mixed_echo_print'              => ['use' => 'echo'], // @Symfony:risky
-        'set_type_to_cast'                 => true, // @Symfony:risky
-        // ------------------------------------------------------------------------------------------ Array Notation
-        'no_whitespace_before_comma_in_array' => false, // @Symfony
-        'trim_array_spaces'                   => true, // @Symfony
-        'whitespace_after_comma_in_array'     => ['ensure_single_space' => false], // @Symfony
 
-        // ------------------------------------------------------------------------------------------ Basic
-        'braces_position' => [
-            'allow_single_line_anonymous_functions'     => true, // @PSR12
-            'allow_single_line_empty_anonymous_classes' => true, // @Symfony
+        // Alias -------------------------------------------------------------------------------------------------------
+        'array_push'                       => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/alias/array_push.rst
+        'ereg_to_preg'                     => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/alias/ereg_to_preg.rst
+        'no_alias_language_construct_call' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/alias/no_alias_language_construct_call.rst
+        'no_mixed_echo_print'              => ['use' => 'echo'], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/alias/no_mixed_echo_print.rst
+        'set_type_to_cast'                 => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/alias/set_type_to_cast.rst
+
+        // Array Notation ----------------------------------------------------------------------------------------------
+        'no_whitespace_before_comma_in_array' => false, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/array_notation/no_whitespace_before_comma_in_array.rst
+        'trim_array_spaces'                   => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/array_notation/trim_array_spaces.rst
+        'whitespace_after_comma_in_array'     => ['ensure_single_space' => false], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/array_notation/whitespace_after_comma_in_array.rst
+
+        // Basic -------------------------------------------------------------------------------------------------------
+        'braces_position' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/basic/braces_position.rst
+            'allow_single_line_anonymous_functions'     => true,
+            'allow_single_line_empty_anonymous_classes' => true,
         ],
-        'no_trailing_comma_in_singleline' => [ // @Symfony
+        'no_trailing_comma_in_singleline' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/basic/no_trailing_comma_in_singleline.rst
             'elements' => [
                 'arguments',
                 'array',
@@ -70,21 +72,24 @@ return (new Config())
                 'group_import',
             ],
         ],
-        'single_line_empty_body' => true,
-        // ------------------------------------------------------------------------------------------ Casing
-        'class_reference_name_casing'    => true, // @Symfony
-        'integer_literal_case'           => true, // @Symfony
-        'magic_constant_casing'          => true, // @Symfony
-        'magic_method_casing'            => true, // @Symfony
-        'native_function_casing'         => true, // @Symfony
-        'native_type_declaration_casing' => true, // @Symfony
-        // ------------------------------------------------------------------------------------------ Cast Notation
-        'cast_spaces'             => ['space' => 'single'], // @Symfony
-        'modernize_types_casting' => true, // @Symfony:risky
-        'no_short_bool_cast'      => true, // @Symfony
-        'no_unset_cast'           => true, // @PHP8x0+Migration
-        // ------------------------------------------------------------------------------------------ Class Notation
-        'class_attributes_separation' => [
+        'single_line_empty_body' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/basic/single_line_empty_body.rst
+
+        // Casing ------------------------------------------------------------------------------------------------------
+        'class_reference_name_casing'    => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/casing/class_reference_name_casing.rst
+        'integer_literal_case'           => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/casing/integer_literal_case.rst
+        'magic_constant_casing'          => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/casing/magic_constant_casing.rst
+        'magic_method_casing'            => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/casing/magic_method_casing.rst
+        'native_function_casing'         => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/casing/native_function_casing.rst
+        'native_type_declaration_casing' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/casing/native_type_declaration_casing.rst
+
+        // Cast Notation -----------------------------------------------------------------------------------------------
+        'cast_spaces'             => ['space' => 'single'], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/cast_notation/cast_spaces.rst
+        'modernize_types_casting' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/cast_notation/modernize_types_casting.rst
+        'no_short_bool_cast'      => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/cast_notation/no_short_bool_cast.rst
+        'no_unset_cast'           => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/cast_notation/no_unset_cast.rst
+
+        // Class Notation ----------------------------------------------------------------------------------------------
+        'class_attributes_separation' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/class_attributes_separation.rst
             'elements' => [
                 'const'        => 'none',
                 'method'       => 'one',
@@ -93,7 +98,7 @@ return (new Config())
                 'case'         => 'none',
             ],
         ],
-        'class_definition' => [
+        'class_definition' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/class_definition.rst
             'inline_constructor_arguments'        => true,
             'multi_line_extends_each_single_line' => false,
             'single_item_single_line'             => true,
@@ -101,37 +106,40 @@ return (new Config())
             'space_before_parenthesis'            => false,
         ],
         //'final_public_method_for_abstract_class' => true,
-        'modern_serialization_methods' => true, // @PHP8x5+Migration:risky
-        'no_php4_constructor'          => true, // @PHP8x0+Migration:risky
-        //'no_null_property_initialization' => true, // PrestaShop will choke on this
-        'no_unneeded_final_method'                 => ['private_methods' => true], // @PHP8x0+Migration:risky
-        'phpdoc_readonly_class_comment_to_keyword' => \PHP_VERSION_ID >= 80200, // [PHP 8.2+] @PHP8x2+Migration:risky
-        'protected_to_private'                     => true, // @Symfony
-        'self_static_accessor'                     => true, // @PhpCsFixer
-        'single_class_element_per_statement'       => ['elements' => ['const', 'property']], // @Symfony
-        //'single_trait_insert_per_statement' => false, // @PSR12
-        'stringable_for_to_string' => true,
-        // ------------------------------------------------------------------------------------------ Comment
-        'no_empty_comment'                  => true, // @Symfony
-        'multiline_comment_opening_closing' => true, // @PhpCsFixer
-        'single_line_comment_spacing'       => false, // @Symfony
-        'single_line_comment_style'         => ['comment_types' => ['hash']], // @Symfony
+        'modern_serialization_methods' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/modern_serialization_methods.rst
+        'no_php4_constructor'          => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/no_php4_constructor.rst
+        // PrestaShop will choke on this
+        //'no_null_property_initialization' => true,
+        'no_unneeded_final_method'                 => ['private_methods' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/no_unneeded_final_method.rst
+        'phpdoc_readonly_class_comment_to_keyword' => \PHP_VERSION_ID >= 80200, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/phpdoc_readonly_class_comment_to_keyword.rst
+        'protected_to_private'                     => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/protected_to_private.rst
+        'self_static_accessor'                     => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/self_static_accessor.rst
+        'single_class_element_per_statement'       => ['elements' => ['const', 'property']], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/single_class_element_per_statement.rst
+        //'single_trait_insert_per_statement' => false,
+        'stringable_for_to_string' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/stringable_for_to_string.rst
 
-        // ------------------------------------------------------------------------------------------ Constant Notation
-        'native_constant_invocation' => [ // @Symfony:risky
+        // Comment -----------------------------------------------------------------------------------------------------
+        'no_empty_comment'                  => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/comment/no_empty_comment.rst
+        'multiline_comment_opening_closing' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/comment/multiline_comment_opening_closing.rst
+        'single_line_comment_spacing'       => false, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/comment/single_line_comment_spacing.rst
+        'single_line_comment_style'         => ['comment_types' => ['hash']], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/comment/single_line_comment_style.rst
+
+        // Constant Notation -------------------------------------------------------------------------------------------
+        'native_constant_invocation' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/constant_notation/native_constant_invocation.rst
             'exclude'      => ['null', 'false', 'true'],
             'fix_built_in' => true,
             'include'      => [],
             'scope'        => 'all',
             'strict'       => false,
         ],
-        // ------------------------------------------------------------------------------------------ Control Structure
-        'empty_loop_body'                 => ['style' => 'braces'], // @Symfony
-        'empty_loop_condition'            => ['style' => 'while'], // @Symfony
-        'include'                         => true, // @Symfony
-        'no_alternative_syntax'           => ['fix_non_monolithic_code' => true], // @Symfony
-        'no_unneeded_braces'              => ['namespaces' => true], // @Symfony
-        'no_unneeded_control_parentheses' => [ // @Symfony
+
+        // Control Structure -------------------------------------------------------------------------------------------
+        'empty_loop_body'                 => ['style' => 'braces'], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/empty_loop_body.rst
+        'empty_loop_condition'            => ['style' => 'while'], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/empty_loop_condition.rst
+        'include'                         => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/include.rst
+        'no_alternative_syntax'           => ['fix_non_monolithic_code' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/no_alternative_syntax.rst
+        'no_unneeded_braces'              => ['namespaces' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/no_unneeded_braces.rst
+        'no_unneeded_control_parentheses' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/no_unneeded_control_parentheses.rst
             'statements' => [
                 'break',
                 'clone',
@@ -145,60 +153,63 @@ return (new Config())
                 'yield_from',
             ],
         ],
-        'no_useless_else'             => true, // @Symfony
-        'simplified_if_return'        => true,
-        'switch_continue_to_break'    => true, // @Symfony
-        'trailing_comma_in_multiline' => [ // @Symfony
+        'no_useless_else'             => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/no_useless_else.rst
+        'simplified_if_return'        => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/simplified_if_return.rst
+        'switch_continue_to_break'    => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/switch_continue_to_break.rst
+        'trailing_comma_in_multiline' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/trailing_comma_in_multiline.rst
             'after_heredoc' => true,
             'elements'      => ['array_destructuring', 'arrays', 'match', 'parameters'],
         ],
-        // ------------------------------------------------------------------------------------------ Function Notation
-        'combine_nested_dirname' => true, // @PHP7x0+Migration:risky
-        'fopen_flag_order'       => true, // @PhpCsFixer:risky
-        'function_declaration'   => [
+
+        // Function Notation -------------------------------------------------------------------------------------------
+        'combine_nested_dirname' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/function_notation/combine_nested_dirname.rst
+        'fopen_flag_order'       => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/function_notation/fopen_flag_order.rst
+        'function_declaration'   => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/function_notation/function_declaration.rst
             'closure_function_spacing'   => 'none',
             'closure_fn_spacing'         => 'none',
             'trailing_comma_single_line' => false,
         ],
-        'lambda_not_used_import'        => true, // @Symfony
-        'native_function_invocation'    => [ // @Symfony:risky
+        'lambda_not_used_import'        => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/function_notation/lambda_not_used_import.rst
+        'native_function_invocation'    => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/function_notation/native_function_invocation.rst
             'exclude' => [],
             'include' => ['@compiler_optimized'],
             'scope'   => 'namespaced',
             'strict'  => true,
         ],
-        'nullable_type_declaration_for_default_null_value' => true, // [PHP 7.1+] @Symfony @PHP8x4+Migration
-        // ------------------------------------------------------------------------------------------ Import
-        'fully_qualified_strict_types' => true, // @Symfony
-        'global_namespace_import'      => [ // @Symfony
+        'nullable_type_declaration_for_default_null_value' => true, // [PHP 7.1+] @Symfony @PHP8x4+Migration // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/function_notation/nullable_type_declaration_for_default_null_value.rst
+
+        // Import ------------------------------------------------------------------------------------------------------
+        'fully_qualified_strict_types' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/import/fully_qualified_strict_types.rst
+        'global_namespace_import'      => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/import/global_namespace_import.rst
             'import_classes'   => false,
             'import_constants' => false,
             'import_functions' => false,
         ],
-        'no_unneeded_import_alias' => true, // @Symfony
-        'no_unused_imports'        => true, // @Symfony
-        'ordered_imports'          => [
+        'no_unneeded_import_alias' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/import/no_unneeded_import_alias.rst
+        'no_unused_imports'        => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/import/no_unused_imports.rst
+        'ordered_imports'          => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/import/ordered_imports.rst
             'imports_order'  => ['const', 'function', 'class'],
             'sort_algorithm' => 'alpha',
         ],
-        // ------------------------------------------------------------------------------------------ Language Construct
-        'combine_consecutive_issets' => true, // @PhpCsFixer
-        'combine_consecutive_unsets' => true, // @PhpCsFixer
-        'declare_parentheses'        => true, // @Symfony
-        'dir_constant'               => true, // @Symfony:risky
-        'explicit_indirect_variable' => true, // @PhpCsFixer
-        'function_to_constant'       => true, // @Symfony:risky
-        'get_class_to_class_keyword' => true, // @PHP8x0+Migration:risky
-        'is_null'                    => true, // @Symfony:risky
-        'nullable_type_declaration'  => ['syntax' => 'question_mark'], // @Symfony
 
-        // ------------------------------------------------------------------------------------------ Namespace Notation
-        'clean_namespace'                 => true, // @PHP8x0+Migration
-        'no_leading_namespace_whitespace' => true, // @Symfony
-        // ------------------------------------------------------------------------------------------ Operator
+        // Language Construct ------------------------------------------------------------------------------------------
+        'combine_consecutive_issets' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/combine_consecutive_issets.rst
+        'combine_consecutive_unsets' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/combine_consecutive_unsets.rst
+        'declare_parentheses'        => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/declare_parentheses.rst
+        'dir_constant'               => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/dir_constant.rst
+        'explicit_indirect_variable' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/explicit_indirect_variable.rst
+        'function_to_constant'       => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/function_to_constant.rst
+        'get_class_to_class_keyword' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/get_class_to_class_keyword.rst
+        'is_null'                    => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/is_null.rst
+        'nullable_type_declaration'  => ['syntax' => 'question_mark'], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/nullable_type_declaration.rst
 
-        //'assign_null_coalescing_to_coalesce_equal' => true, // [PHP 7.4+] @PHP7x4+Migration
-        'binary_operator_spaces' => [
+        // Namespace Notation ------------------------------------------------------------------------------------------
+        'clean_namespace'                 => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/namespace_notation/clean_namespace.rst
+        'no_leading_namespace_whitespace' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/namespace_notation/no_leading_namespace_whitespace.rst
+
+        // Operator ----------------------------------------------------------------------------------------------------
+        //'assign_null_coalescing_to_coalesce_equal' => true,
+        'binary_operator_spaces' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/operator/binary_operator_spaces.rst
             'default'   => 'single_space',
             'operators' => [
                 '='  => 'align_single_space_minimal',
@@ -206,42 +217,43 @@ return (new Config())
                 '|'  => 'no_space',
             ],
         ],
-        'concat_space'               => ['spacing' => 'none'], // @Symfony
-        'logical_operators'          => true, // @Symfony:risky
-        'long_to_shorthand_operator' => true, // @Symfony:risky
-        'new_expression_parentheses' => ['use_parentheses' => true], // @PHP8x4+Migration
-        'new_with_parentheses'       => [ // @Symfony
+        'concat_space'               => ['spacing' => 'none'], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/operator/concat_space.rst
+        'logical_operators'          => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/operator/logical_operators.rst
+        'long_to_shorthand_operator' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/operator/long_to_shorthand_operator.rst
+        'new_expression_parentheses' => ['use_parentheses' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/operator/new_expression_parentheses.rst
+        'new_with_parentheses'       => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/operator/new_with_parentheses.rst
             'anonymous_class' => false,
             'named_class'     => true,
         ],
-        'no_useless_concat_operator'   => ['juggle_simple_strings' => true],
-        'no_useless_nullsafe_operator' => true, // @Symfony
-        'standardize_increment'        => true, // @Symfony
-        'standardize_not_equals'       => true, // @Symfony
+        'no_useless_concat_operator'   => ['juggle_simple_strings' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/operator/no_useless_concat_operator.rst
+        'no_useless_nullsafe_operator' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/operator/no_useless_nullsafe_operator.rst
+        'standardize_increment'        => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/operator/standardize_increment.rst
+        'standardize_not_equals'       => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/operator/standardize_not_equals.rst
         //'ternary_to_null_coalescing' => true, // @PHP7x0+Migration
-        'unary_operator_spaces' => ['only_dec_inc' => false], // @Symfony
+        'unary_operator_spaces' => ['only_dec_inc' => false], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/operator/unary_operator_spaces.rst
 
-        // ------------------------------------------------------------------------------------------ PHP Tag
-        'blank_line_after_opening_tag' => false,
-        'echo_tag_syntax'              => [ // @Symfony
+        // PHP Tag -----------------------------------------------------------------------------------------------------
+        'blank_line_after_opening_tag' => false, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/php_tag/blank_line_after_opening_tag.rst
+        'echo_tag_syntax'              => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/php_tag/echo_tag_syntax.rst
             'format'                         => 'short',
             'long_function'                  => 'echo',
             'shorten_simple_statements_only' => true,
         ],
-        'linebreak_after_opening_tag' => false,
-        // ------------------------------------------------------------------------------------------ PHPDoc
-        'align_multiline_comment'             => true, // @Symfony
-        'no_blank_lines_after_phpdoc'         => true, // @Symfony
-        'no_empty_phpdoc'                     => true, // @Symfony
-        'no_superfluous_phpdoc_tags'          => ['allow_hidden_params' => true, 'remove_inheritdoc' => true], // @Symfony
-        'phpdoc_add_missing_param_annotation' => ['only_untyped' => true], // @PhpCsFixer
-        'phpdoc_align'                        => [
+        'linebreak_after_opening_tag' => false, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/php_tag/linebreak_after_opening_tag.rst
+
+        // PHPDoc ------------------------------------------------------------------------------------------------------
+        'align_multiline_comment'             => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/align_multiline_comment.rst
+        'no_blank_lines_after_phpdoc'         => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/no_blank_lines_after_phpdoc.rst
+        'no_empty_phpdoc'                     => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/no_empty_phpdoc.rst
+        'no_superfluous_phpdoc_tags'          => ['allow_hidden_params' => true, 'remove_inheritdoc' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/no_superfluous_phpdoc_tags.rst
+        'phpdoc_add_missing_param_annotation' => ['only_untyped' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_add_missing_param_annotation.rst
+        'phpdoc_align'                        => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_align.rst
             'align'   => 'vertical',
             'spacing' => 1,
         ],
-        'phpdoc_annotation_without_dot' => true, // @Symfony
-        'phpdoc_indent'                 => true, // @Symfony
-        'phpdoc_inline_tag_normalizer'  => [ // @Symfony
+        'phpdoc_annotation_without_dot' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_annotation_without_dot.rst
+        'phpdoc_indent'                 => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_indent.rst
+        'phpdoc_inline_tag_normalizer'  => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_inline_tag_normalizer.rst
             'tags' => [
                 'example',
                 'id',
@@ -254,7 +266,7 @@ return (new Config())
                 'tutorial',
             ],
         ],
-        'phpdoc_line_span' => [
+        'phpdoc_line_span' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_line_span.rst
             'case'         => 'single',
             'class'        => 'single',
             'const'        => 'single',
@@ -265,8 +277,8 @@ return (new Config())
             'trait_import' => 'single',
         ],
         //'phpdoc_list_type' => true, // [RISKY]
-        'phpdoc_no_access'    => true, // @Symfony
-        'phpdoc_no_alias_tag' => [ // @Symfony
+        'phpdoc_no_access'    => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_no_access.rst
+        'phpdoc_no_alias_tag' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_no_alias_tag.rst
             'replacements' => [
                 'const'          => 'var',
                 'link'           => 'see',
@@ -275,10 +287,10 @@ return (new Config())
                 'type'           => 'var',
             ],
         ],
-        'phpdoc_no_useless_inheritdoc' => true, // @Symfony
-        'phpdoc_order'                 => ['order' => ['param', 'return', 'throws']], // @Symfony
-        'phpdoc_param_order'           => true,
-        'phpdoc_return_self_reference' => [ // @Symfony
+        'phpdoc_no_useless_inheritdoc' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_no_useless_inheritdoc.rst
+        'phpdoc_order'                 => ['order' => ['param', 'return', 'throws']], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_order.rst
+        'phpdoc_param_order'           => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_param_order.rst
+        'phpdoc_return_self_reference' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_return_self_reference.rst
             'replacements' => [
                 'this'    => '$this',
                 '@this'   => '$this',
@@ -288,7 +300,7 @@ return (new Config())
                 '@static' => 'static',
             ],
         ],
-        'phpdoc_scalar' => [ // @Symfony
+        'phpdoc_scalar' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_scalar.rst
             'types' => [
                 'boolean',
                 'callback',
@@ -301,7 +313,7 @@ return (new Config())
                 'str',
             ],
         ],
-        'phpdoc_separation' => [
+        'phpdoc_separation' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_separation.rst
             'groups' => [
                 ['Annotation', 'NamedArgumentConstructor', 'Target'],
                 ['author', 'link', 'see', 'copyright', 'license', 'deprecated', 'since'],
@@ -310,36 +322,39 @@ return (new Config())
             ],
             'skip_unlisted_annotations' => false,
         ],
-        'phpdoc_single_line_var_spacing'                => true, // @Symfony
-        'phpdoc_trim_consecutive_blank_line_separation' => true, // @Symfony
-        'phpdoc_trim'                                   => true, // @Symfony
-        'phpdoc_types'                                  => ['groups' => ['alias', 'meta', 'simple']], // @Symfony
-        'phpdoc_types_order'                            => ['null_adjustment' => 'always_last', 'sort_algorithm' => 'none'], // @Symfony
-        'phpdoc_var_annotation_correct_order'           => true, // @Symfony
-        'phpdoc_var_without_name'                       => true, // @Symfony
-        // ------------------------------------------------------------------------------------------ Return Notation
-        'no_useless_return'      => true, // @Symfony
-        'simplified_null_return' => true,
-        // ------------------------------------------------------------------------------------------ Semicolon
-        'no_empty_statement'                         => true, // @Symfony
-        'no_singleline_whitespace_before_semicolons' => true, // @Symfony
-        //'semicolon_after_instruction' => true, // @Symfony
-        'space_after_semicolon' => ['remove_in_empty_for_expressions' => true], // @Symfony
+        'phpdoc_single_line_var_spacing'                => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_single_line_var_spacing.rst
+        'phpdoc_trim_consecutive_blank_line_separation' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_trim_consecutive_blank_line_separation.rst
+        'phpdoc_trim'                                   => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_trim.rst
+        'phpdoc_types'                                  => ['groups' => ['alias', 'meta', 'simple']], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_types.rst
+        'phpdoc_types_order'                            => ['null_adjustment' => 'always_last', 'sort_algorithm' => 'none'], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_types_order.rst
+        'phpdoc_var_annotation_correct_order'           => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_var_annotation_correct_order.rst
+        'phpdoc_var_without_name'                       => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_var_without_name.rst
 
-        // ------------------------------------------------------------------------------------------ Strict
-        'declare_strict_types' => ['preserve_existing_declaration' => false], // [PHP 7.0+] @PHP7x0+Migration:risky
-        'strict_comparison'    => true, // @PhpCsFixer:risky
-        'strict_param'         => true, // @PhpCsFixer:risky
-        // ------------------------------------------------------------------------------------------ String Notation
-        'explicit_string_variable'          => true, // @PhpCsFixer
-        'no_binary_string'                  => true, // @Symfony
-        'simple_to_complex_string_variable' => true, // @PHP8x2+Migration @Symfony
-        'single_quote'                      => ['strings_containing_single_quote_chars' => false], // @Symfony
+        // Return Notation ---------------------------------------------------------------------------------------------
+        'no_useless_return'      => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/return_notation/no_useless_return.rst
+        'simplified_null_return' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/return_notation/simplified_null_return.rst
 
-        // ------------------------------------------------------------------------------------------ Whitespace
-        'array_indentation'           => true, // @Symfony
-        'blank_line_before_statement' => ['statements' => ['return', 'try']],
-        'no_extra_blank_lines'        => [ // @Symfony
+        // Semicolon ---------------------------------------------------------------------------------------------------
+        'no_empty_statement'                         => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/semicolon/no_empty_statement.rst
+        'no_singleline_whitespace_before_semicolons' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/semicolon/no_singleline_whitespace_before_semicolons.rst
+        //'semicolon_after_instruction' => true,
+        'space_after_semicolon' => ['remove_in_empty_for_expressions' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/semicolon/space_after_semicolon.rst
+
+        // Strict ------------------------------------------------------------------------------------------------------
+        'declare_strict_types' => ['preserve_existing_declaration' => false], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/strict/declare_strict_types.rst
+        'strict_comparison'    => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/strict/strict_comparison.rst
+        'strict_param'         => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/strict/strict_param.rst
+
+        // String Notation ---------------------------------------------------------------------------------------------
+        'explicit_string_variable'          => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/string_notation/explicit_string_variable.rst
+        'no_binary_string'                  => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/string_notation/no_binary_string.rst
+        'simple_to_complex_string_variable' => true, // @PHP8x2+Migration @Symfony // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/string_notation/simple_to_complex_string_variable.rst
+        'single_quote'                      => ['strings_containing_single_quote_chars' => false], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/string_notation/single_quote.rst
+
+        // Whitespace --------------------------------------------------------------------------------------------------
+        'array_indentation'           => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/array_indentation.rst
+        'blank_line_before_statement' => ['statements' => ['return', 'try']], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/blank_line_before_statement.rst
+        'no_extra_blank_lines'        => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/no_extra_blank_lines.rst
             'tokens' => [
                 'attribute',
                 'break',
@@ -358,9 +373,10 @@ return (new Config())
                 //'use_trait'
             ],
         ],
-        'no_spaces_around_offset' => ['positions' => ['inside', 'outside']], // @Symfony
-        'statement_indentation'   => ['stick_comment_to_next_continuous_control_statement' => true], // @Symfony
-        'types_spaces'            => [ // @Symfony
+
+        'no_spaces_around_offset' => ['positions' => ['inside', 'outside']], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/no_spaces_around_offset.rst
+        'statement_indentation'   => ['stick_comment_to_next_continuous_control_statement' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/statement_indentation.rst
+        'types_spaces'            => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/types_spaces.rst
             'space'                => 'none',
             'space_multiple_catch' => null,
         ],
