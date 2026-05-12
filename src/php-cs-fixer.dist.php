@@ -316,9 +316,10 @@ return (new Config())
         'phpdoc_separation' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_separation.rst
             'groups' => [
                 ['Annotation', 'NamedArgumentConstructor', 'Target'],
-                ['author', 'link', 'see', 'copyright', 'license', 'deprecated', 'since'],
+                ['link', 'see', 'author', 'copyright', 'license', 'deprecated', 'since'],
                 ['category', 'package', 'subpackage'],
                 ['property', 'property-read', 'property-write'],
+                ['param', 'return', 'throw'],
             ],
             'skip_unlisted_annotations' => false,
         ],
