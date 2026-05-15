@@ -99,13 +99,13 @@ return (new Config())
             ],
         ],
         'class_definition' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/class_definition.rst
-            'inline_constructor_arguments'        => true,
+            'inline_constructor_arguments'        => false,
             'multi_line_extends_each_single_line' => false,
             'single_item_single_line'             => true,
             'single_line'                         => true,
             'space_before_parenthesis'            => false,
         ],
-        //'final_public_method_for_abstract_class' => true,
+        'final_public_method_for_abstract_class' => true,
         'modern_serialization_methods' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/modern_serialization_methods.rst
         'no_php4_constructor'          => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/no_php4_constructor.rst
         // PrestaShop will choke on this
@@ -170,6 +170,12 @@ return (new Config())
             'trailing_comma_single_line' => false,
         ],
         'lambda_not_used_import'        => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/function_notation/lambda_not_used_import.rst
+        'method_argument_space'         => [
+            'after_heredoc'                    => true,
+            'attribute_placement'              => 'ignore',
+            'keep_multiple_spaces_after_comma' => true,
+            'on_multiline'                     => 'ensure_fully_multiline',
+        ],
         'native_function_invocation'    => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/function_notation/native_function_invocation.rst
             'exclude' => [],
             'include' => ['@compiler_optimized'],
@@ -386,7 +392,10 @@ return (new Config())
         'PhpCsFixerCustomFixers/no_useless_parenthesis'        => true,
         'PhpCsFixerCustomFixers/promoted_constructor_property' => true,
         'PhpCsFixerCustomFixers/stringable_interface'          => true,
-        'ErickSkrauch/align_multiline_parameters'              => true,
+        'ErickSkrauch/align_multiline_parameters'              => [
+            'variables' => true,
+            'defaults'  => true,
+        ],
         'TheGe/blank_lines_before_classy_block'                => true,
     ])
 ;
