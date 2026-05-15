@@ -116,7 +116,6 @@ return (new Config())
         'self_static_accessor'                     => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/self_static_accessor.rst
         'single_class_element_per_statement'       => ['elements' => ['const', 'property']], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/single_class_element_per_statement.rst
         //'single_trait_insert_per_statement' => false,
-        'stringable_for_to_string' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/stringable_for_to_string.rst
 
         // Comment -----------------------------------------------------------------------------------------------------
         'no_empty_comment'                  => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/comment/no_empty_comment.rst
