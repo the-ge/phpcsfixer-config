@@ -386,12 +386,11 @@ return (new Config())
             'space'                => 'none',
             'space_multiple_catch' => null,
         ],
-        'PhpCsFixerCustomFixers/declare_after_opening_tag'     => true,
+        'PhpCsFixerCustomFixers/declare_after_opening_tag'     => true, // https://github.com/kubawerlos/php-cs-fixer-custom-fixers
         'PhpCsFixerCustomFixers/no_useless_dirname_call'       => true,
         'PhpCsFixerCustomFixers/no_useless_parenthesis'        => true,
         'PhpCsFixerCustomFixers/promoted_constructor_property' => true,
-        'PhpCsFixerCustomFixers/stringable_interface'          => true,
-        'ErickSkrauch/align_multiline_parameters'              => [
+        'ErickSkrauch/align_multiline_parameters'              => [     // https://github.com/erickskrauch/php-cs-fixer-custom-fixers
             'variables' => true,
             'defaults'  => true,
         ],
