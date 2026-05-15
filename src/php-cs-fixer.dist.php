@@ -105,7 +105,7 @@ return (new Config())
             'single_line'                         => true,
             'space_before_parenthesis'            => false,
         ],
-        //'final_public_method_for_abstract_class' => true,
+        //'final_public_method_for_abstract_class' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/final_public_method_for_abstract_class.rst
         'modern_serialization_methods' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/modern_serialization_methods.rst
         'no_php4_constructor'          => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/class_notation/no_php4_constructor.rst
         // PrestaShop will choke on this
