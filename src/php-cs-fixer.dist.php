@@ -142,6 +142,7 @@ return (new Config())
         'empty_loop_condition'            => ['style' => 'while'], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/empty_loop_condition.rst
         'include'                         => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/include.rst
         'no_alternative_syntax'           => ['fix_non_monolithic_code' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/no_alternative_syntax.rst
+        'no_superfluous_elseif'           => true,
         'no_unneeded_braces'              => ['namespaces' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/no_unneeded_braces.rst
         'no_unneeded_control_parentheses' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/no_unneeded_control_parentheses.rst
             'statements' => [
