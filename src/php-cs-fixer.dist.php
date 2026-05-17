@@ -455,8 +455,7 @@ return (new Config())
                 //'use_trait'
             ],
         ],
-
-        'no_spaces_around_offset' => ['positions' => ['inside', 'outside']], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/no_spaces_around_offset.rst
+        //'no_spaces_around_offset' => ['positions' => ['inside', 'outside']], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/no_spaces_around_offset.rst
         'statement_indentation'   => ['stick_comment_to_next_continuous_control_statement' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/statement_indentation.rst
         'types_spaces'            => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/types_spaces.rst
             'space'                => 'none',
