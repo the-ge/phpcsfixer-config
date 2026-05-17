@@ -204,15 +204,85 @@ return (new Config())
         ],
 
         // Language Construct ------------------------------------------------------------------------------------------
-        'combine_consecutive_issets' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/combine_consecutive_issets.rst
-        'combine_consecutive_unsets' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/combine_consecutive_unsets.rst
-        'declare_parentheses'        => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/declare_parentheses.rst
-        'dir_constant'               => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/dir_constant.rst
-        'explicit_indirect_variable' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/explicit_indirect_variable.rst
-        'function_to_constant'       => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/function_to_constant.rst
-        'get_class_to_class_keyword' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/get_class_to_class_keyword.rst
-        'is_null'                    => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/is_null.rst
-        'nullable_type_declaration'  => ['syntax' => 'question_mark'], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/nullable_type_declaration.rst
+        'combine_consecutive_issets'    => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/combine_consecutive_issets.rst
+        'combine_consecutive_unsets'    => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/combine_consecutive_unsets.rst
+        'declare_parentheses'           => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/declare_parentheses.rst
+        'dir_constant'                  => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/dir_constant.rst
+        'explicit_indirect_variable'    => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/explicit_indirect_variable.rst
+        'function_to_constant'          => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/function_to_constant.rst
+        'get_class_to_class_keyword'    => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/get_class_to_class_keyword.rst
+        'is_null'                       => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/is_null.rst
+        'nullable_type_declaration'     => ['syntax' => 'question_mark'], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/nullable_type_declaration.rst
+        'single_space_around_construct' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/language_construct/single_space_around_construct.rst
+            'constructs_contain_a_single_space'     => ['yield_from'],
+            'constructs_followed_by_a_single_space' => [
+                'abstract',
+                'as',
+                'attribute',
+                'break',
+                'case',
+                'catch',
+                'class',
+                'clone',
+                'comment',
+                'const',
+                'const_import',
+                'continue',
+                'do',
+                'echo',
+                'else',
+                'elseif',
+                'enum',
+                'extends',
+                'final',
+                'finally',
+                'for',
+                'foreach',
+                'function',
+                'function_import',
+                'global',
+                'goto',
+                'if',
+                'implements',
+                'include',
+                'include_once',
+                'instanceof',
+                'insteadof',
+                'interface',
+                'match',
+                'named_argument',
+                'namespace',
+                'new',
+                'open_tag_with_echo',
+                'php_doc',
+                'php_open',
+                'print',
+                'private',
+                'private_set',
+                'protected',
+                'protected_set',
+                'public',
+                'public_set',
+                'readonly',
+                'require',
+                'require_once',
+                'return',
+                'static',
+                'switch',
+                'throw',
+                'trait',
+                'try',
+                'type_colon',
+                'use',
+                'use_lambda',
+                'use_trait',
+                'var',
+                'while',
+                'yield',
+                'yield_from',
+            ],
+            'constructs_preceded_by_a_single_space' => ['as', 'else', 'elseif', 'use_lambda'],
+        ],
 
         // Namespace Notation ------------------------------------------------------------------------------------------
         'clean_namespace'                 => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/namespace_notation/clean_namespace.rst
