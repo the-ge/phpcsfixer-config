@@ -63,6 +63,11 @@ return (new Config())
         'braces_position' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/basic/braces_position.rst
             'allow_single_line_anonymous_functions'     => true,
             'allow_single_line_empty_anonymous_classes' => true,
+            'anonymous_classes_opening_brace'           => 'same_line',
+            'anonymous_functions_opening_brace'         => 'same_line',
+            'classes_opening_brace'                     => 'next_line_unless_newline_at_signature_end',
+            'control_structures_opening_brace'          => 'same_line',
+            'functions_opening_brace'                   => 'next_line_unless_newline_at_signature_end',
         ],
         'no_trailing_comma_in_singleline' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/basic/no_trailing_comma_in_singleline.rst
             'elements' => [
