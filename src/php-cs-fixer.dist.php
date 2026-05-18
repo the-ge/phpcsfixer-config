@@ -253,7 +253,7 @@ return (new Config())
                 'named_argument',
                 'namespace',
                 'new',
-                'open_tag_with_echo',
+                //'open_tag_with_echo',
                 'php_doc',
                 'php_open',
                 'print',
