@@ -394,16 +394,16 @@ return (new Config())
                 'str',
             ],
         ],
-        'phpdoc_separation' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_separation.rst
-            'groups' => [
-                ['Annotation', 'NamedArgumentConstructor', 'Target'],
-                ['link', 'see', 'author', 'copyright', 'license', 'deprecated', 'since'],
-                ['category', 'package', 'subpackage'],
-                ['property', 'property-read', 'property-write'],
-                ['param', 'return', 'throw'],
-            ],
-            'skip_unlisted_annotations' => false,
-        ],
+        //'phpdoc_separation' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_separation.rst
+        //    'groups' => [
+        //        ['Annotation', 'NamedArgumentConstructor', 'Target'],
+        //        ['link', 'see', 'author', 'copyright', 'license', 'deprecated', 'since'],
+        //        ['category', 'package', 'subpackage'],
+        //        ['property', 'property-read', 'property-write'],
+        //        ['param', 'return', 'throw'],
+        //    ],
+        //    'skip_unlisted_annotations' => true,
+        //],
         'phpdoc_single_line_var_spacing'                => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_single_line_var_spacing.rst
         'phpdoc_trim_consecutive_blank_line_separation' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_trim_consecutive_blank_line_separation.rst
         'phpdoc_trim'                                   => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/phpdoc/phpdoc_trim.rst
