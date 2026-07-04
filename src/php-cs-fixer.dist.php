@@ -163,7 +163,7 @@ return (new Config())
         'switch_continue_to_break'    => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/switch_continue_to_break.rst
         'trailing_comma_in_multiline' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/control_structure/trailing_comma_in_multiline.rst
             'after_heredoc' => true,
-            'elements'      => ['array_destructuring', 'arrays', 'match', 'parameters'],
+            'elements'      => ['array_destructuring', 'arrays', 'parameters'],
         ],
 
         // Function Notation -------------------------------------------------------------------------------------------
