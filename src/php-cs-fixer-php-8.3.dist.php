@@ -174,14 +174,14 @@ return (new Config())
             'closure_fn_spacing'         => 'none',
             'trailing_comma_single_line' => false,
         ],
-        'lambda_not_used_import'        => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/function_notation/lambda_not_used_import.rst
-        'method_argument_space'         => [
+        'lambda_not_used_import' => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/function_notation/lambda_not_used_import.rst
+        'method_argument_space'  => [
             'after_heredoc'                    => true,
             'attribute_placement'              => 'ignore',
             'keep_multiple_spaces_after_comma' => true,
             'on_multiline'                     => 'ensure_fully_multiline',
         ],
-        'native_function_invocation'    => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/function_notation/native_function_invocation.rst
+        'native_function_invocation' => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/function_notation/native_function_invocation.rst
             'exclude' => [],
             'include' => ['@compiler_optimized'],
             'scope'   => 'namespaced',
@@ -456,8 +456,8 @@ return (new Config())
             ],
         ],
         //'no_spaces_around_offset' => ['positions' => ['inside', 'outside']], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/no_spaces_around_offset.rst
-        'statement_indentation'   => ['stick_comment_to_next_continuous_control_statement' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/statement_indentation.rst
-        'types_spaces'            => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/types_spaces.rst
+        'statement_indentation' => ['stick_comment_to_next_continuous_control_statement' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/statement_indentation.rst
+        'types_spaces'          => [ // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/whitespace/types_spaces.rst
             'space'                => 'none',
             'space_multiple_catch' => null,
         ],
@@ -469,6 +469,6 @@ return (new Config())
             'variables' => true,
             'defaults'  => true,
         ],
-        'TheGe/blank_lines_before_classy_block'                => true,
+        'TheGe/blank_lines_before_classy_block' => true,
     ])
 ;
