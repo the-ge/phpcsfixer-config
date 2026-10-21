@@ -419,7 +419,7 @@ return (new Config())
         'space_after_semicolon' => ['remove_in_empty_for_expressions' => true], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/semicolon/space_after_semicolon.rst
 
         // Strict ------------------------------------------------------------------------------------------------------
-        'declare_strict_types' => ['preserve_existing_declaration' => false], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/strict/declare_strict_types.rst
+        'declare_strict_types' => ['strategy' => 'enforce'], // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/strict/declare_strict_types.rst
         'strict_comparison'    => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/strict/strict_comparison.rst
         'strict_param'         => true, // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/strict/strict_param.rst
 
