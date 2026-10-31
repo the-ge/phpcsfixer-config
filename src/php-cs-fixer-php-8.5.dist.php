@@ -7,7 +7,7 @@
  * Created:   2026-01-21 19:09:02
  * @author    Gabriel Tenita <g1704578400@tenita.eu>
  * @see       https://github.com/the-ge/
- * @copyright Copyright (c) 2024-present Gabriel Tenita
+ * @copyright Copyright (c) 2026-present Gabriel Tenita
  * @license   https://www.apache.org/licenses/LICENSE-2.0 Apache License version 2.0
  */
 
